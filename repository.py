@@ -118,4 +118,4 @@ def category_stats(db_path):
             ORDER BY c.rowid""").fetchall()
     finally:
         conn.close()
-    return [{"類別": r[0], "總件數": r[1], "待認領": r[2], "已認領": r[3]} for rin rows]
+    return [{"類別": r[0], "總件數": r[1], "待認領": r[2], "已認領": r[3]} for r in rows]
